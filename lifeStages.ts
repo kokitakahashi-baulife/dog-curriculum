@@ -81,6 +81,7 @@ export const lifeStages: LifeStage[] = [
       {
         title: "ワクチン前の社会化",
         note: "散歩デビュー前でも、抱っこ散歩・来客・音などで安全に社会化できる。",
+        slug: "puppy-socialization",
       },
       {
         title: "睡眠は1日18時間",
@@ -123,14 +124,17 @@ export const lifeStages: LifeStage[] = [
       {
         title: "なぜ急にできなくなるのか",
         note: "思春期は脳の再配線が起きる時期。反抗ではなく発達。罰で潰さず、易しい条件に戻して再構築する。",
+        slug: "dog-adolescence",
       },
       {
         title: "呼び戻しは一生の安全装置",
         note: "呼び戻しの語は絶対に叱りに使わない。来たら必ず良いことが起きる、を守り続ける。",
+        slug: "recall-training",
       },
       {
         title: "拾い食い対策",
         note: "「やめなさい」で触る前に止め、「出して／ちょうだい」で交換回収。叱って追いかけない。",
+        slug: "stop-scavenging",
       },
       {
         title: "引っ張らない散歩",
@@ -171,6 +175,7 @@ export const lifeStages: LifeStage[] = [
       {
         title: "来客・インターホン対応",
         note: "「ベッドで待機」を仕込むと、来客時に飛びつき・吠えを根本から減らせる。",
+        slug: "visitor-barking",
       },
       {
         title: "車・おでかけの安全",
@@ -208,6 +213,7 @@ export const lifeStages: LifeStage[] = [
       {
         title: "認知機能不全（認知症）のサイン",
         note: "夜鳴き・徘徊・呼んでも反応が鈍い・粗相の再発など。気づいたら早めに獣医へ。",
+        slug: "senior-dog-cognitive",
       },
       {
         title: "負荷を下げる工夫",
