@@ -65,6 +65,11 @@ export const categoryLabels: Record<Category, string> = {
   trick: "トリック・芸",
 };
 
+// 表示用ラベル: 「英名 / 和名」。呼称は英語を主、和名を従にする。
+export function commandLabel(c: Pick<DogCommand, "name" | "nameJa">): string {
+  return `${c.name} / ${c.nameJa}`;
+}
+
 export const difficultyLabels: Record<Difficulty, string> = {
   beginner: "初級",
   intermediate: "中級",
@@ -93,8 +98,8 @@ export const commands: DogCommand[] = [
   // ───────────────────────── 土台スキル ─────────────────────────
   {
     id: "marker",
-    name: 'Marker / "Yes"',
-    nameJa: "マーカー（Yesの充電）",
+    name: "Marker",
+    nameJa: "マーカー",
     cue: "Yes（またはクリッカー）",
     category: "foundation",
     difficulty: "beginner",
@@ -134,8 +139,8 @@ export const commands: DogCommand[] = [
   },
   {
     id: "release",
-    name: "Release cue",
-    nameJa: "解除語（OK / ブレイク）",
+    name: "Release",
+    nameJa: "解除",
     cue: "OK / フリー / ブレイク",
     category: "foundation",
     difficulty: "beginner",
@@ -176,8 +181,8 @@ export const commands: DogCommand[] = [
   },
   {
     id: "name-response",
-    name: "Name response",
-    nameJa: "名前への反応（注目）",
+    name: "Name",
+    nameJa: "名前",
     cue: "（犬の名前）",
     category: "foundation",
     difficulty: "beginner",
@@ -218,7 +223,7 @@ export const commands: DogCommand[] = [
   {
     id: "watch-me",
     name: "Watch me",
-    nameJa: "アイコンタクト（注視）",
+    nameJa: "アイコンタクト",
     cue: "Watch / 見て",
     category: "foundation",
     difficulty: "beginner",
@@ -254,8 +259,8 @@ export const commands: DogCommand[] = [
   },
   {
     id: "touch",
-    name: "Touch (hand target)",
-    nameJa: "タッチ（鼻ターゲット）",
+    name: "Touch",
+    nameJa: "タッチ",
     cue: "Touch / タッチ",
     category: "foundation",
     difficulty: "beginner",
@@ -384,7 +389,7 @@ export const commands: DogCommand[] = [
   {
     id: "stand",
     name: "Stand",
-    nameJa: "たて（立止）",
+    nameJa: "たて",
     cue: "Stand / たて",
     category: "basic-obedience",
     difficulty: "beginner",
@@ -420,7 +425,7 @@ export const commands: DogCommand[] = [
   {
     id: "stay",
     name: "Stay",
-    nameJa: "まて（位置を保つ）",
+    nameJa: "まて",
     cue: "Stay / まて",
     category: "stay-position",
     difficulty: "intermediate",
@@ -471,7 +476,7 @@ export const commands: DogCommand[] = [
   {
     id: "wait",
     name: "Wait",
-    nameJa: "待って（一時停止）",
+    nameJa: "待って",
     cue: "Wait / 待って",
     category: "stay-position",
     difficulty: "beginner",
@@ -505,8 +510,8 @@ export const commands: DogCommand[] = [
   },
   {
     id: "place",
-    name: "Place / Go to mat",
-    nameJa: "プレイス（定位置へ）",
+    name: "Place",
+    nameJa: "プレイス",
     cue: "プレイス / マット",
     category: "stay-position",
     difficulty: "intermediate",
@@ -546,8 +551,8 @@ export const commands: DogCommand[] = [
   },
   {
     id: "settle",
-    name: "Settle / Relax",
-    nameJa: "落ち着いて（弛緩）",
+    name: "Settle",
+    nameJa: "落ち着いて",
     cue: "Settle / 落ち着いて / リラックス",
     category: "impulse-control",
     difficulty: "intermediate",
@@ -592,8 +597,8 @@ export const commands: DogCommand[] = [
   // ───────────────────────── 呼び戻し ─────────────────────────
   {
     id: "come",
-    name: "Come / Recall",
-    nameJa: "おいで（呼び戻し）",
+    name: "Come",
+    nameJa: "おいで",
     cue: "Come / おいで",
     category: "recall-come",
     difficulty: "intermediate",
@@ -645,7 +650,7 @@ export const commands: DogCommand[] = [
   {
     id: "leave-it",
     name: "Leave it",
-    nameJa: "やめなさい（触る前に離れる）",
+    nameJa: "やめなさい",
     cue: "Leave it / やめなさい",
     category: "impulse-control",
     difficulty: "intermediate",
@@ -689,8 +694,8 @@ export const commands: DogCommand[] = [
   },
   {
     id: "drop-it",
-    name: "Drop it / Give",
-    nameJa: "出して（口から放す）",
+    name: "Drop it",
+    nameJa: "出して",
     cue: "Drop it / 出して / ちょうだい",
     category: "impulse-control",
     difficulty: "intermediate",
@@ -736,7 +741,7 @@ export const commands: DogCommand[] = [
   {
     id: "off",
     name: "Off",
-    nameJa: "オフ（飛びつき・降りて）",
+    nameJa: "オフ",
     cue: "Off / オフ",
     category: "impulse-control",
     difficulty: "intermediate",
@@ -786,8 +791,8 @@ export const commands: DogCommand[] = [
   // ───────────────────────── リードマナー ─────────────────────────
   {
     id: "loose-leash",
-    name: "Loose-leash walking",
-    nameJa: "リードを張らない歩行",
+    name: "Loose leash",
+    nameJa: "ゆるリード",
     cue: "Let's go / 行こう",
     category: "leash-manners",
     difficulty: "intermediate",
@@ -836,7 +841,7 @@ export const commands: DogCommand[] = [
   {
     id: "heel",
     name: "Heel",
-    nameJa: "ヒール（つけ）",
+    nameJa: "ヒール",
     cue: "Heel / ヒール / つけ",
     category: "leash-manners",
     difficulty: "advanced",
@@ -876,8 +881,8 @@ export const commands: DogCommand[] = [
   // ───────────────────────── 生活スキル ─────────────────────────
   {
     id: "potty",
-    name: "Potty on cue",
-    nameJa: "トイレ（ワンツー）",
+    name: "Potty",
+    nameJa: "トイレ",
     cue: "ワンツー / トイレ",
     category: "life-skill",
     difficulty: "beginner",
@@ -916,8 +921,8 @@ export const commands: DogCommand[] = [
   },
   {
     id: "crate",
-    name: "Crate / Go to crate",
-    nameJa: "ハウス（クレートに入る）",
+    name: "Crate",
+    nameJa: "ハウス",
     cue: "ハウス",
     category: "life-skill",
     difficulty: "beginner",
@@ -955,8 +960,8 @@ export const commands: DogCommand[] = [
   },
   {
     id: "polite-greeting",
-    name: "Polite greeting (four on the floor)",
-    nameJa: "飛びつかない挨拶（4本足）",
+    name: "Polite greeting",
+    nameJa: "飛びつかない挨拶",
     cue: "なし（飛びつかない“デフォルト行動”。座って出迎えさせる時は「すわれ」）",
     category: "impulse-control",
     difficulty: "intermediate",
@@ -997,7 +1002,7 @@ export const commands: DogCommand[] = [
   {
     id: "chin-rest",
     name: "Chin rest",
-    nameJa: "あご乗せ（チンレスト）",
+    nameJa: "あご乗せ",
     cue: "あご / チン",
     category: "cooperative-care",
     difficulty: "intermediate",
@@ -1037,8 +1042,8 @@ export const commands: DogCommand[] = [
   },
   {
     id: "paw-target",
-    name: "Paw / Give paw for care",
-    nameJa: "足を出す（爪切り・足ふき）",
+    name: "Paw target",
+    nameJa: "足を出す",
     cue: "あんよ / フット",
     category: "cooperative-care",
     difficulty: "intermediate",
@@ -1077,8 +1082,8 @@ export const commands: DogCommand[] = [
   // ───────────────────────── 生活スキル（追加） ─────────────────────────
   {
     id: "give",
-    name: "Give (to hand)",
-    nameJa: "ちょうだい（手に渡す）",
+    name: "Give",
+    nameJa: "ちょうだい",
     cue: "ちょうだい",
     category: "impulse-control",
     difficulty: "beginner",
@@ -1114,8 +1119,8 @@ export const commands: DogCommand[] = [
   },
   {
     id: "fetch",
-    name: "Fetch / Retrieve",
-    nameJa: "もってきて（持来）",
+    name: "Fetch",
+    nameJa: "もってきて",
     cue: "もってきて / とってこい",
     category: "life-skill",
     difficulty: "intermediate",
@@ -1195,8 +1200,8 @@ export const commands: DogCommand[] = [
   },
   {
     id: "crate-out",
-    name: "Out of crate (wait & release)",
-    nameJa: "クレートから出る（待って解除）",
+    name: "Out of crate",
+    nameJa: "クレートから出る",
     cue: "（解除語）OK / ブレイク",
     category: "life-skill",
     difficulty: "beginner",
@@ -1227,8 +1232,8 @@ export const commands: DogCommand[] = [
   },
   {
     id: "door-wait",
-    name: "Wait at the door",
-    nameJa: "玄関でまて（飛び出し防止）",
+    name: "Door wait",
+    nameJa: "玄関でまて",
     cue: "待って",
     category: "stay-position",
     difficulty: "intermediate",
@@ -1263,8 +1268,8 @@ export const commands: DogCommand[] = [
   },
   {
     id: "car",
-    name: "Car (load up / out)",
-    nameJa: "車に乗る・降りる",
+    name: "Car",
+    nameJa: "車の乗り降り",
     cue: "乗って / 降りて",
     category: "life-skill",
     difficulty: "intermediate",
@@ -1302,8 +1307,8 @@ export const commands: DogCommand[] = [
   },
   {
     id: "go-to-bed",
-    name: "Go to bed (settle on place)",
-    nameJa: "ベッドで待機（来客・食事中）",
+    name: "Go to bed",
+    nameJa: "ベッドで待機",
     cue: "ベッド / おうち",
     category: "stay-position",
     difficulty: "intermediate",
@@ -1338,8 +1343,8 @@ export const commands: DogCommand[] = [
   },
   {
     id: "gentle",
-    name: "Gentle (take food softly)",
-    nameJa: "そっと（やさしく受け取る）",
+    name: "Gentle",
+    nameJa: "そっと",
     cue: "そっと",
     category: "impulse-control",
     difficulty: "beginner",
@@ -1372,7 +1377,7 @@ export const commands: DogCommand[] = [
   // ───────────────────────── トリック・芸 ─────────────────────────
   {
     id: "shake",
-    name: "Shake (paw)",
+    name: "Shake",
     nameJa: "お手",
     cue: "お手",
     category: "trick",
@@ -1404,7 +1409,7 @@ export const commands: DogCommand[] = [
   {
     id: "shake-other",
     name: "Other paw",
-    nameJa: "おかわり（反対の手）",
+    nameJa: "おかわり",
     cue: "おかわり",
     category: "trick",
     difficulty: "beginner",

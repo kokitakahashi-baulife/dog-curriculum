@@ -50,3 +50,7 @@ export type { Fundamental } from "./fundamentals";
 // 問題行動から効くコマンドを引くFAQ軸
 export { problems } from "./problems";
 export type { ProblemTopic } from "./problems";
+
+// 犬の一生の「しつけ地図」（ライフステージ別ピラー）
+export { lifeStages, lifeStageById } from "./lifeStages";
+export type { LifeStage, LifeStageId, KnowledgeItem } from "./lifeStages";
