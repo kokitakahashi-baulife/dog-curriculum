@@ -68,3 +68,8 @@ export type {
   MissionTest,
   StepRefKind,
 } from "./missions";
+
+// バージョンと配布用バンドル（Web/iOS で共有するJSONの形）
+export { curriculumVersion } from "./meta";
+export { curriculumBundle } from "./bundle";
+export type { CurriculumBundle } from "./bundle";

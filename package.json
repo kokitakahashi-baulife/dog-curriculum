@@ -1,6 +1,6 @@
 {
   "name": "@baulife/dog-curriculum",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "犬のコマンド・カリキュラム共有データ（フレームワーク非依存・純TypeScript）。Webメディアとアプリで共有する単一の正本。",
   "type": "module",
   "main": "index.ts",
@@ -11,5 +11,11 @@
   "files": [
     "*.ts"
   ],
+  "scripts": {
+    "build": "tsx scripts/build-json.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2"
+  },
   "license": "UNLICENSED"
 }
