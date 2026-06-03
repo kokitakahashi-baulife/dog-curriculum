@@ -21,10 +21,51 @@ import {
 
 ## 取り込み方
 
-- **git submodule**（推奨）: 各リポに `vendor/curriculum` 等として追加し、ビルド時に同梱。
-- npm: `@baulife/dog-curriculum` として publish も可能（`exports` 設定済み）。
+- **Web（baudog.world）**: git submodule として `dog-command-web/src/data` にマウント済み。Astro が直接 import。
+- **iOS**: 下記の配布JSONを消費（バンドル＋OTA）。Swiftは.tsを読めないため、TS→JSONに変換して渡す。
+
+## 配布JSON（Web/iOS共有の正本フォーマット）
+
+`bundle.ts` の `curriculumBundle()` が「配布用JSONの形」の単一定義。
+表示（画像・コンポーネント・記事）は含まない＝**コンテンツのみ**。
+
+```jsonc
+{
+  "version": "1.0.0",                 // meta.ts。更新判定に使う
+  "labels": { "categoryLabels": …, "difficultyLabels": …, "methodLabels": …, "testTypeLabels": … },
+  "commands": [ … ], "careTasks": [ … ],
+  "levels": { "commandLevels": …, "careLevels": …, "allLevels": … },
+  "levelSequence": [ … ],             // 依存順に事前計算済み（解放順に使える）
+  "missions": [ … ], "problems": [ … ], "lifeStages": [ … ],
+  "program": { "programPhases": …, "milestones": … },
+  "roadmap": [ … ], "fundamentals": [ … ]
+}
+```
+
+ローカルで書き出す:
+
+```sh
+npm install
+npm run build        # → dist/curriculum.json（全部入り）＋ dist/<domain>.json
+```
+
+## OTA配信（iOS）
+
+Web が同じ `curriculumBundle()` を静的JSONとして配信している（Webの表示と常に一致）:
+
+```
+https://baudog.world/data/curriculum.json
+```
+
+iOS の推奨パターン:
+1. アプリに `curriculum.json` のスナップショットを**バンドル**（オフライン初期表示）。
+2. 起動時に上記URLを取得し、`version` がバンドルより新しければ差し替え（**アプリ更新なしでコンテンツ更新**）。
+3. 取得失敗時はバンドル/前回キャッシュにフォールバック。
+
+型は `index.ts` の `interface`（`DogCommand` / `Mission` / `CommandLevel` …）が契約。iOS 側は同じ構造を `Codable` でミラーする。
 
 ## 更新フロー
 
-データはこのリポで編集・コミット・push する。各consumerは
-`git submodule update --remote` で最新を取り込み、再ビルド/デプロイする。
+データはこのリポで編集・コミット・push する。
+- Web: `cd dog-command-web && git submodule update --remote src/data` → コミット → Vercel自動デプロイ（`/data/curriculum.json` も自動更新）。
+- 破壊的でない追加・改訂は `meta.ts` の `curriculumVersion` をマイナーアップ。
