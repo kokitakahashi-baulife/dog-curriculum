@@ -54,3 +54,7 @@ export type { ProblemTopic } from "./problems";
 // 犬の一生の「しつけ地図」（ライフステージ別ピラー）
 export { lifeStages, lifeStageById } from "./lifeStages";
 export type { LifeStage, LifeStageId, KnowledgeItem } from "./lifeStages";
+
+// お迎え〜2歳の処方プログラム（can-doマイルストーン層）
+export { programPhases, milestones, milestoneRootId, milestoneItemIds } from "./program";
+export type { ProgramPhase, Milestone } from "./program";
