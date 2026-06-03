@@ -58,3 +58,13 @@ export type { LifeStage, LifeStageId, KnowledgeItem } from "./lifeStages";
 // お迎え〜2歳の処方プログラム（can-doマイルストーン層）
 export { programPhases, milestones, milestoneRootId, milestoneItemIds } from "./program";
 export type { ProgramPhase, Milestone } from "./program";
+
+// 悩み起点の解決プログラム（ゴール→依存分解→日割り＋テスト）
+export { missions, getMission } from "./missions";
+export type {
+  Mission,
+  MissionDay,
+  MissionChainLink,
+  MissionTest,
+  StepRefKind,
+} from "./missions";
