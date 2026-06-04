@@ -1460,6 +1460,10 @@ export const commands: DogCommand[] = [
     proofing: "右回り・左回りを別の号令にすると芸の幅が広がる。立つ場所を変えてもできるように。",
     prerequisites: ["marker"],
     tips: "速く回らせず、ゆっくり。目が回らないよう連続でやりすぎない。",
+    troubleshooting: [
+      { problem: "おやつだけ取って回らない／途中で止まる", solution: "手をもっとゆっくり・大きく、体に沿わせて動かす。回りやすい向きから始め、半周ずつ強化する。" },
+    ],
+    sources: [`${AKC}`],
   },
   {
     id: "roll-over",
@@ -1484,6 +1488,12 @@ export const commands: DogCommand[] = [
     safety:
       "硬い床は避け、カーペットやマットの上で。胴が長い犬種・シニア・関節や背骨に不安がある犬は無理にさせない。",
     tips: "半回転（横たわり）で詰まる子は、そこを丁寧に強化してから一回転へ。",
+    troubleshooting: [
+      { problem: "半回転（横たわり）で止まる", solution: "そこを数回多めに強化してから、さらに背中側へおやつを回す。" },
+      { problem: "背中を床につけるのを嫌がる", solution: "マットの上でゆっくり。怖がる子は無理せず、別のトリックから自信をつける。" },
+    ],
+    proofing: "右回り・左回りどちらにも転がれるように。立った姿勢からでも、合図だけでもできるように。",
+    sources: [`${AKC}`],
   },
   {
     id: "high-five",
@@ -1505,6 +1515,13 @@ export const commands: DogCommand[] = [
     fadeLure: "握りおやつ→立てた空の手→言葉＋手のサイン、と抜く。",
     prerequisites: ["marker", "shake"],
     distinguishFrom: "お手＝上向きの手のひらに足を“乗せる”／ハイタッチ＝立てた手のひらに足を“当てる”。",
+    troubleshooting: [
+      { problem: "お手と混同して手のひらに“乗せて”くる", solution: "手をしっかり立て、当てに来た時だけ強化。お手は上向き・ハイタッチは立てる、と手の形で区別する。" },
+      { problem: "強く叩いてくる", solution: "低めの手で、やさしく当たった時だけ「Yes」。強い時は反応しない。" },
+    ],
+    proofing: "左右の手・立った姿勢・いろいろな人ともできるように。",
+    tips: "お手がしっかり固まってから始めると早い。",
+    sources: [`${AKC}`],
   },
   {
     id: "wave",
@@ -1526,6 +1543,12 @@ export const commands: DogCommand[] = [
     fadeLure: "手を出す→手を振るだけ→言葉だけ、と抜く。",
     prerequisites: ["marker", "shake"],
     tips: "お手が染みついていると手に乗せに来る。届かない位置がコツ。",
+    troubleshooting: [
+      { problem: "手に足を乗せに来てしまう", solution: "足が届かない位置に手を出す。宙で空ぶりした瞬間だけ強化する。" },
+      { problem: "振りが小さい", solution: "手を上下に動かして、足の上下を誘う。大きく動いた時に強化。" },
+    ],
+    proofing: "座っても立っても、少し離れた距離からでも振れるように。",
+    sources: [`${AKC}`],
   },
   {
     id: "bow",
@@ -1549,6 +1572,12 @@ export const commands: DogCommand[] = [
     prerequisites: ["marker", "stand"],
     safety: "腰を強く反らせない。痛がる素振りがあれば中止。",
     distinguishFrom: "おじぎ＝お尻を上げたまま前半身だけ下げる／ふせ＝全身を伏せる。",
+    troubleshooting: [
+      { problem: "お尻まで落ちて“ふせ”になる", solution: "おやつを下げすぎない。お腹の下に手や腕をそっと添えてお尻を支え、前半身だけ下げる。" },
+    ],
+    proofing: "いろいろな場所で、合図だけでお辞儀できるように。",
+    tips: "スタンド（立つ）が安定してから始めるとうまくいく。",
+    sources: [`${AKC}`],
   },
   {
     id: "play-dead",
@@ -1570,6 +1599,12 @@ export const commands: DogCommand[] = [
     fadeLure: "おやつ誘導→指鉄砲の合図＋言葉、と抜く。",
     prerequisites: ["marker", "down"],
     tips: "ゴロンを先に教えていると、横倒しの動きがスムーズ。",
+    troubleshooting: [
+      { problem: "すぐ起き上がる", solution: "静止を“1秒”から強化し、徐々に伸ばす。止まった瞬間に「Yes」。" },
+    ],
+    proofing: "立った状態からでも、合図だけでも。静止時間を少しずつ伸ばす。",
+    distinguishFrom: "バーン＝横たわって静止／ゴロン＝回転して起き上がる。",
+    sources: [`${AKC}`],
   },
   {
     id: "beg",
@@ -1592,6 +1627,13 @@ export const commands: DogCommand[] = [
     prerequisites: ["marker", "sit"],
     safety:
       "⚠️ 腰・背中に負担がかかる芸。短時間・低い姿勢から。子犬・シニア・胴の長い犬種・関節に不安がある犬は避ける。痛がる素振りがあれば中止。",
+    troubleshooting: [
+      { problem: "すぐ立ち上がる・ジャンプする", solution: "おやつを高く上げすぎない。鼻先の少し上、わずかに浮く所で「Yes」。" },
+      { problem: "バランスが崩れる", solution: "壁ぎわや、飼い主の手・腕で軽く支えて安定させてから少しずつ自立へ。" },
+    ],
+    proofing: "合図だけで、保てる時間を少しずつ伸ばす。",
+    tips: "体幹を使う芸。短時間で切り上げ、腰に負担をかけない。",
+    sources: [`${AKC}`],
   },
   {
     id: "speak",
@@ -1615,6 +1657,13 @@ export const commands: DogCommand[] = [
     safety:
       "要求吠え・無駄吠えを助長しないよう、必ず「静かに」で止められる状態で教える。吠え癖が強い犬には不向き。",
     distinguishFrom: "おはなし＝合図で吠える／静かに＝吠えを止める。必ず両方セットで。",
+    fadeLure: "吠えやすい状況→言葉の合図→小さな手のサイン、と移していく。",
+    troubleshooting: [
+      { problem: "連続で吠えてしまう", solution: "“1回だけ”を強化。吠え止んで静かになってから次の合図を出す。" },
+      { problem: "まったく吠えない", solution: "吠えやすい状況（インターホンの真似など）を作り、最初の小さな声も逃さず強化する。" },
+    ],
+    proofing: "いろいろな場所で、静かな状況でも合図で1回だけ吠えられるように。",
+    sources: [`${AKC}`],
   },
   {
     id: "back-up",
@@ -1637,6 +1686,12 @@ export const commands: DogCommand[] = [
     fadeLure: "踏み込む動き→小さな手の合図→言葉だけ、と抜く。",
     prerequisites: ["marker"],
     tips: "斜めに逃げる子は、最初は壁と家具の“細い通路”を使うと真っすぐ下がる。",
+    troubleshooting: [
+      { problem: "斜めや横にそれる", solution: "壁と家具で作った“細い通路”で練習し、まっすぐ下がるしかない状況にする。" },
+      { problem: "下がらず座ってしまう", solution: "踏み込みを小さくし、後ろ足が一歩でも後ろに動いた瞬間だけ「Yes」。" },
+    ],
+    proofing: "広い場所でも、合図だけで、歩数を伸ばして下がれるように。",
+    sources: [`${AKC}`],
   },
   {
     id: "find-it",
@@ -1658,5 +1713,12 @@ export const commands: DogCommand[] = [
     ],
     prerequisites: ["marker"],
     tips: "嗅覚運動は短時間でもよく疲れる。クレートや家具を噛む退屈対策にも効果的。",
+    fadeLure: "見せて隠す→見せずに隠す→隠す数や難度を上げる、と段階的に難しくする。",
+    troubleshooting: [
+      { problem: "すぐ諦める", solution: "簡単な隠し場所（目の前・布の半分だけ）に戻し、成功させてから難しくする。" },
+      { problem: "鼻でなく目で探している", solution: "完全に見えない隠し方にして、鼻を使わざるを得ない状況を作る。" },
+    ],
+    proofing: "いろいろな部屋・屋外・探す物の種類を増やして般化する。",
+    sources: [`${AKC}`],
   },
 ];
