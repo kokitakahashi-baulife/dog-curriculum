@@ -2638,6 +2638,107 @@ export const commandLevels: Record<string, CommandLevel[]> = {
       requires: ["find-it:L1"],
     },
   ],
+
+  // ───────── 協調ケア ─────────
+  "side-lying": [
+    {
+      level: 1,
+      condition: "横向きに寝そべる（誘導）。",
+      steps: [
+        "「ふせ」から鼻先のおやつを肩越しに動かし、体を横向きに倒す。",
+        "横向きに寝たら「Yes」→ご褒美。",
+      ],
+      criterion: "横向きに寝て3秒静止する、5回続けて。",
+      reason: "横向きの保定姿勢を作る（診察・お手入れの土台）。",
+      testType: "trial",
+      measure: { successes: 5, consecutive: true, holdSeconds: 3 },
+      requires: ["marker:L1", "down:L4"],
+    },
+    {
+      level: 2,
+      condition: "「ヨコ」の合図で寝て、力を抜いて待つ。",
+      criterion: "合図で横になり10秒、力を抜いて静止、10回中8回。",
+      reason: "合図で安定して横向き保定ができる。",
+      testType: "trial",
+      measure: { trials: 10, successes: 8, holdSeconds: 10 },
+      requires: ["side-lying:L1"],
+    },
+    {
+      level: 3,
+      condition: "横になったまま、足・お腹・耳を触らせる。",
+      criterion: "横向きのまま各所を触られても動かない、10回中8回。",
+      reason: "肛門腺・お腹・足のお手入れを暴れず受けられる。",
+      testType: "trial",
+      measure: { trials: 10, successes: 8 },
+      requires: ["side-lying:L2"],
+    },
+  ],
+  station: [
+    {
+      level: 1,
+      condition: "低い台に四肢で乗る。",
+      steps: [
+        "低くて安定した台を用意し、前足が乗ったら「Yes」→ご褒美。",
+        "四肢が乗ったらたっぷり強化する。",
+      ],
+      criterion: "台に四肢で乗る、5回続けて。",
+      reason: "“台＝良い場所”を作る。",
+      testType: "trial",
+      measure: { successes: 5, consecutive: true },
+      requires: ["marker:L1", "touch:L1"],
+    },
+    {
+      level: 2,
+      condition: "「のって」で乗り、その上で5秒待つ。",
+      criterion: "合図で乗って5秒待つ、10回中8回。",
+      reason: "体重測定・トリミング台で待てる。",
+      testType: "trial",
+      measure: { trials: 10, successes: 8, holdSeconds: 5 },
+      requires: ["station:L1"],
+    },
+    {
+      level: 3,
+      condition: "いろいろな台で乗って待ち、乗ったまま体を触らせる。",
+      criterion: "別の台でも乗って待ち、触られても降りない、10回中8回。",
+      reason: "実際の体重計・トリミング台で使える。",
+      testType: "trial",
+      measure: { trials: 10, successes: 8 },
+      requires: ["station:L2"],
+    },
+  ],
+  muzzle: [
+    {
+      level: 1,
+      condition: "口輪に自分から鼻を入れる。",
+      steps: [
+        "バスケット型口輪の中におやつを塗り、差し出す。",
+        "自分から鼻を入れて舐めたら「Yes」→ご褒美。押し付けない。",
+      ],
+      criterion: "自分から鼻を口輪に入れる、5回続けて。",
+      reason: "口輪＝良いことの合図、の第一歩。",
+      testType: "trial",
+      measure: { successes: 5, consecutive: true },
+      requires: ["marker:L1", "touch:L1"],
+    },
+    {
+      level: 2,
+      condition: "鼻を入れて5秒キープ＋ストラップに触れさせる。",
+      criterion: "鼻を入れて5秒、首後ろのストラップに触れても平気、10回中8回。",
+      reason: "装着の一歩手前まで受け入れる。",
+      testType: "trial",
+      measure: { trials: 10, successes: 8, holdSeconds: 5 },
+      requires: ["muzzle:L1"],
+    },
+    {
+      level: 3,
+      condition: "装着して短い時間を落ち着いて過ごす。",
+      criterion: "口輪を留めて1〜2分、落ち着いて過ごせる（散歩・診察を想定）。",
+      reason: "通院や処置で実際に使える。",
+      testType: "duration",
+      measure: { holdSeconds: 60, reps: 1 },
+      requires: ["muzzle:L2"],
+    },
+  ],
 };
 
 // ケア・装着系のレベル（careTasks.ts の id に対応）

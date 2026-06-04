@@ -1463,7 +1463,7 @@ export const commands: DogCommand[] = [
     troubleshooting: [
       { problem: "おやつだけ取って回らない／途中で止まる", solution: "手をもっとゆっくり・大きく、体に沿わせて動かす。回りやすい向きから始め、半周ずつ強化する。" },
     ],
-    sources: [`${AKC}`],
+    sources: [`${AKC}teach-your-dog-to-spin-around/`],
   },
   {
     id: "roll-over",
@@ -1493,7 +1493,7 @@ export const commands: DogCommand[] = [
       { problem: "背中を床につけるのを嫌がる", solution: "マットの上でゆっくり。怖がる子は無理せず、別のトリックから自信をつける。" },
     ],
     proofing: "右回り・左回りどちらにも転がれるように。立った姿勢からでも、合図だけでもできるように。",
-    sources: [`${AKC}`],
+    sources: [`${AKC}how-to-teach-a-dog-to-roll-over/`],
   },
   {
     id: "high-five",
@@ -1521,7 +1521,7 @@ export const commands: DogCommand[] = [
     ],
     proofing: "左右の手・立った姿勢・いろいろな人ともできるように。",
     tips: "お手がしっかり固まってから始めると早い。",
-    sources: [`${AKC}`],
+    sources: [`${AKC}teach-your-dog-to-give-you-a-high-five/`],
   },
   {
     id: "wave",
@@ -1548,7 +1548,7 @@ export const commands: DogCommand[] = [
       { problem: "振りが小さい", solution: "手を上下に動かして、足の上下を誘う。大きく動いた時に強化。" },
     ],
     proofing: "座っても立っても、少し離れた距離からでも振れるように。",
-    sources: [`${AKC}`],
+    sources: [`${AKC}advanced-dog-tricks/`],
   },
   {
     id: "bow",
@@ -1577,7 +1577,7 @@ export const commands: DogCommand[] = [
     ],
     proofing: "いろいろな場所で、合図だけでお辞儀できるように。",
     tips: "スタンド（立つ）が安定してから始めるとうまくいく。",
-    sources: [`${AKC}`],
+    sources: [`${AKC}advanced-dog-tricks/`],
   },
   {
     id: "play-dead",
@@ -1604,7 +1604,7 @@ export const commands: DogCommand[] = [
     ],
     proofing: "立った状態からでも、合図だけでも。静止時間を少しずつ伸ばす。",
     distinguishFrom: "バーン＝横たわって静止／ゴロン＝回転して起き上がる。",
-    sources: [`${AKC}`],
+    sources: [`${AKC}teach-your-dog-to-play-dead/`],
   },
   {
     id: "beg",
@@ -1633,7 +1633,7 @@ export const commands: DogCommand[] = [
     ],
     proofing: "合図だけで、保てる時間を少しずつ伸ばす。",
     tips: "体幹を使う芸。短時間で切り上げ、腰に負担をかけない。",
-    sources: [`${AKC}`],
+    sources: [`${AKC}teach-dog-sit-pretty/`],
   },
   {
     id: "speak",
@@ -1663,7 +1663,7 @@ export const commands: DogCommand[] = [
       { problem: "まったく吠えない", solution: "吠えやすい状況（インターホンの真似など）を作り、最初の小さな声も逃さず強化する。" },
     ],
     proofing: "いろいろな場所で、静かな状況でも合図で1回だけ吠えられるように。",
-    sources: [`${AKC}`],
+    sources: [`${AKC}train-your-dog-to-speak/`],
   },
   {
     id: "back-up",
@@ -1691,7 +1691,7 @@ export const commands: DogCommand[] = [
       { problem: "下がらず座ってしまう", solution: "踏み込みを小さくし、後ろ足が一歩でも後ろに動いた瞬間だけ「Yes」。" },
     ],
     proofing: "広い場所でも、合図だけで、歩数を伸ばして下がれるように。",
-    sources: [`${AKC}`],
+    sources: ["https://www.akc.org/canine-partners/teach-your-dog-to-back-up/"],
   },
   {
     id: "find-it",
@@ -1719,6 +1719,97 @@ export const commands: DogCommand[] = [
       { problem: "鼻でなく目で探している", solution: "完全に見えない隠し方にして、鼻を使わざるを得ない状況を作る。" },
     ],
     proofing: "いろいろな部屋・屋外・探す物の種類を増やして般化する。",
-    sources: [`${AKC}`],
+    sources: [`${AKC}advanced-dog-tricks/`],
+  },
+
+  // ───────── 協調ケア（お手入れ・通院を楽に） ─────────
+  {
+    id: "side-lying",
+    name: "Lie on side",
+    nameJa: "横になる",
+    cue: "ヨコ",
+    category: "cooperative-care",
+    difficulty: "intermediate",
+    method: "lure",
+    scene:
+      "合図で横向きに寝そべり、体を預けて静止する。診察・肛門腺・お腹や後ろ足のお手入れ・心音チェックが格段に楽になる、協調ケアの主役級スキル。",
+    handSignal: "「ふせ」から、鼻先のおやつを肩越し・床方向へ動かして体を横へ倒す。",
+    markPoint: "横向きに寝て、体の力が抜けた瞬間。",
+    howToTeach: [
+      "「ふせ」をさせ、鼻先のおやつを肩越しに動かして体を横向きに倒す（ゴロンの半回転と同じ入り）。",
+      "横向きに寝て肩や腰が床についたら「Yes」→ご褒美。",
+      "体の力がふっと抜けたら、さらに強化。静かに寝ていられる時間を伸ばす。",
+      "安定したら「ヨコ」を付け、横になったまま足・お腹・耳をそっと触る練習を少しずつ足す。",
+    ],
+    fadeLure: "おやつ誘導→手のサイン→言葉だけ、と抜く。",
+    proofing: "左右どちらの向きでも、いろいろな場所・トリミング台の上でも、長く預けられるように。",
+    troubleshooting: [
+      { problem: "すぐ起き上がる", solution: "横になった“瞬間”を1秒から強化し、徐々に時間を伸ばす。落ち着けるマットの上で。" },
+      { problem: "お腹を見せるのを怖がる", solution: "無理に仰向けにしない。横向きでOK。なでて安心させながらゆっくり。" },
+    ],
+    prerequisites: ["marker", "down", "settle"],
+    safety:
+      "シニア・妊娠中・痛みや不安がある犬は無理に倒さない。嫌がるサイン（こわばり・顔をそむける）が出たら中止し、やさしい段階へ戻す。",
+    tips: "肛門腺やお腹のお手入れの前にこれができると、暴れず安全に行える。",
+    sources: [`${AKC}dog-trick-training-vet-visits/`],
+  },
+  {
+    id: "station",
+    name: "Station",
+    nameJa: "台に乗る",
+    cue: "のって",
+    category: "cooperative-care",
+    difficulty: "intermediate",
+    method: "shape",
+    scene:
+      "低い台やマットに自分から乗り、その上で待つ。体重測定・トリミング台・足ふきの定位置・順番待ちに便利。動いてほしくない場面の“安心ポジション”。",
+    handSignal: "台を手で示す、または台の上におやつを示す。",
+    markPoint: "四肢が台に乗り、その上で落ち着いた瞬間。",
+    howToTeach: [
+      "低くて安定した台（バスマット・踏み台・体重計など）を用意し、近づいたり前足が乗ったら「Yes」→ご褒美。",
+      "四肢が乗ったらたっぷり強化。台の上が“良い場所”になる。",
+      "乗ったまま数秒待てたら「Yes」。待てる時間を少しずつ伸ばす。",
+      "「のって」を付け、合図で乗って待てるように。乗ったまま体を触る・持ち上げる練習も足す。",
+    ],
+    fadeLure: "おやつを台に置く→指で示す→言葉だけ、と抜く。",
+    proofing: "いろいろな台（体重計・トリミング台・濡れマット）で、合図だけで乗って待てるように。",
+    troubleshooting: [
+      { problem: "すぐ降りてしまう", solution: "乗っている間こまめに「Yes」→ご褒美。降りる前に強化する間隔を短くする。" },
+      { problem: "台を怖がる", solution: "低い・安定した・滑らない台から。床に置いたマットなど“高さゼロ”で慣らす。" },
+    ],
+    prerequisites: ["marker", "touch"],
+    safety: "ぐらつかない・滑らない台を使う。高い台は落下に注意し、最初は低い物で。",
+    tips: "体重計に乗る練習にしておくと、毎月の体重チェックが楽になる。",
+    sources: [`${AKC}teaching-targeting-to-your-dog/`],
+  },
+  {
+    id: "muzzle",
+    name: "Muzzle",
+    nameJa: "口輪に慣らす",
+    cue: "くち",
+    category: "cooperative-care",
+    difficulty: "advanced",
+    method: "shape",
+    scene:
+      "口輪（マズル）に自分から鼻を入れ、装着を受け入れる。通院・処置・災害時・他犬との安全確保に。正しく慣らせば“嫌な道具”でなく“良いことの合図”になる。",
+    handSignal: "口輪を差し出す（中におやつを塗る／入れる）。",
+    markPoint: "自分から鼻を口輪に入れた瞬間。",
+    howToTeach: [
+      "バスケット型口輪（呼吸・パンティング・飲水ができる物）を選び、中におやつ（ペースト等）を塗る。",
+      "口輪を差し出し、犬が自分から鼻を入れて舐めたら「Yes」→ご褒美。決して押し付けない。",
+      "鼻を入れていられる時間を少しずつ伸ばす。次にストラップを“留めずに”首の後ろへ回す→留める、と段階を踏む。",
+      "短時間の装着→おやつ→外す、をくり返し、口輪＝良いことの合図にする。装着時間を徐々に伸ばす。",
+    ],
+    fadeLure: "口輪の中のおやつ→入れた後にご褒美→装着できたらご褒美、と移す。",
+    proofing: "いろいろな場所・短い散歩・診察台の上でも、自分から鼻を入れて装着を受け入れられるように。",
+    troubleshooting: [
+      { problem: "口輪を嫌がって鼻を入れない", solution: "前の段階へ戻す。見せる→近づける→おやつで一瞬触れる、と細かく刻む。絶対に押し付けない。" },
+      { problem: "装着するとパニックになる", solution: "装着時間が長すぎる。1秒から。留め具まで進むのを焦らない。" },
+    ],
+    prerequisites: ["marker", "touch"],
+    safety:
+      "⚠️ 呼吸・パンティング・水が飲めるバスケット型を選ぶ（布製の筒型は長時間×・熱中症の危険）。口輪は咬傷予防の“管理道具”であり、問題行動そのものの解決にはならない。攻撃性・強い恐怖がある場合は専門家と併用を。",
+    tips: "予定がなくても平時にゆっくり慣らしておくと、いざという時に犬の負担が少ない。",
+    sources: [`${AKC}dog-muzzles-when-why-how-to-use/`],
   },
 ];
