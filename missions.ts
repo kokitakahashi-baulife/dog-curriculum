@@ -1348,7 +1348,7 @@ export const missions: Mission[] = [
     safety:
       "毛玉を無理に引っぱると痛みが出て、ブラッシング嫌いの原因になります。ひどい毛玉はカットやトリマーに任せてください。皮膚に赤み・かさぶた・痛がる様子があるときは、ブラッシングより先に動物病院へ。",
     relatedProblems: [],
-    relatedArticles: [],
+    relatedArticles: ["brushing-fix"],
   },
 
   // ───────────────────────── 拾い食い（行動修正） ─────────────────────────
