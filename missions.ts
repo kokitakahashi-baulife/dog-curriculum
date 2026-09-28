@@ -2075,7 +2075,7 @@ export const missions: Mission[] = [
     safety:
       "【重要】すでに噛んだ、本気で唸る、小さな子どもがいる家庭の場合は、独学で進めず必ず専門家（獣医行動診療医・IAABC／CCPDT-KA）に相談してください。罰を与える・取り上げる・マズルを掴む・にらみ返すは、不安を強め、噛みつきを悪化させる危険があります。守る物を出さない・食事中は構わない、という安全管理を何よりも優先してください。",
     relatedProblems: ["guarding"],
-    relatedArticles: [],
+    relatedArticles: ["resource-guarding-fix"],
   },
 ];
 
