@@ -956,7 +956,7 @@ export const commands: DogCommand[] = [
     distinguishFrom:
       "ハウス＝クレートに入る号令／プレイス＝マット（定位置）へ行って待つ号令。場所と目的が違う。",
     safety: "クレートのサイズは“立って向きを変え、伏せて伸びられる”大きさ。首輪の引っ掛かりに注意。",
-    sources: [`${AKC}crate-training-benefits-getting-started/`],
+    sources: [`${AKC}how-to-crate-train-dog/`],
   },
   {
     id: "polite-greeting",
@@ -995,7 +995,7 @@ export const commands: DogCommand[] = [
     distinguishFrom:
       "オフ＝乗った/前足をかけた状態から“降ろす”号令／飛びつかない挨拶＝そもそも飛びつかないデフォルト行動。",
     safety: "子ども・高齢者への飛びつきは転倒事故につながる。早期に最優先で。",
-    sources: [`${AKC}how-to-train-a-dog-to-stop-jumping/`],
+    sources: [`${AKC}stop-dog-jumping/`],
   },
 
   // ───────────────────────── 協調ケア ─────────────────────────
@@ -1038,7 +1038,7 @@ export const commands: DogCommand[] = [
     safety:
       "嫌がるそぶり（顔を背ける・舌なめずり・あくび）が出たら手前で止める。福祉に直結する最重要マナー。",
     tips: "点眼・投薬・耳掃除・歯のチェックがこれ一つで激変する。地味だが投資効果が最も高いスキル。",
-    sources: [`${AKC}how-to-train-your-dog-for-cooperative-care/`],
+    sources: ["https://www.akc.org/expert-advice/health/teaching-dog-enjoy-grooming/"],
   },
   {
     id: "paw-target",
@@ -1076,7 +1076,7 @@ export const commands: DogCommand[] = [
       "お手＝挨拶・芸として足を“ポンと出す”／足を出す（協調ケア）＝出した足を“保持して触らせる”。目的が保持とケア受け入れ。",
     safety:
       "深爪（血管・神経のクイック）に注意。黒い爪は少しずつ。出血時用の止血剤を手元に。",
-    sources: [`${AKC}how-to-train-your-dog-for-cooperative-care/`],
+    sources: ["https://www.akc.org/expert-advice/health/teaching-dog-enjoy-grooming/"],
   },
 
   // ───────────────────────── 生活スキル（追加） ─────────────────────────
@@ -1115,7 +1115,7 @@ export const commands: DogCommand[] = [
     distinguishFrom:
       "出して（drop-it）＝その場に“放す/落とす”／ちょうだい＝口から“手のひらに渡す”。回収先が地面か手か。",
     safety: "危険物・誤飲しそうな物は、叱らず交換で。慌てて追いかけると遊びだと思って飲み込む。",
-    sources: [`${AKC}teach-your-dog-to-drop-it/`],
+    sources: [`${AKC}teaching-your-dog-to-drop-it/`],
   },
   {
     id: "fetch",
@@ -1196,7 +1196,7 @@ export const commands: DogCommand[] = [
     safety:
       "急な過剰吠え・夜鳴きの増加は痛みや不安のサインのことも。続く場合は獣医・専門家へ。",
     tips: "“静かにを教える前に、わざと吠えさせる「ワン」を教えると、オン/オフで制御しやすい”という上級アプローチもある。",
-    sources: [`${AKC}how-to-teach-your-dog-to-be-quiet/`],
+    sources: [`${AKC}how-to-stop-dog-barking/`],
   },
   {
     id: "crate-out",
@@ -1228,7 +1228,7 @@ export const commands: DogCommand[] = [
     distinguishFrom:
       "ハウス＝中に“入る”号令／クレートから出る＝開いても待ち、解除語で“出る”。入口での自制が目的。",
     safety: "車のドアでの飛び出しは交通事故に直結。車では必ずこの待ちを徹底する。",
-    sources: [`${AKC}crate-training-benefits-getting-started/`],
+    sources: [`${AKC}how-to-crate-train-dog/`],
   },
   {
     id: "door-wait",
@@ -1264,7 +1264,7 @@ export const commands: DogCommand[] = [
     distinguishFrom:
       "まて（stay）＝姿勢と位置を保ち続ける／玄関でまて＝“出口で一時停止し解除で進む”動作直前の自制。",
     safety: "ドアダッシュは死亡事故の主因の一つ。子犬のうちから最優先で習慣化する。",
-    sources: [`${AKC}how-to-teach-your-dog-to-wait-at-the-door/`],
+    sources: [`${AKC}teach-your-dog-to-wait-at-doorways/`],
   },
   {
     id: "car",
@@ -1303,7 +1303,7 @@ export const commands: DogCommand[] = [
     prerequisites: ["release", "wait"],
     safety:
       "走行中は必ずクレートかドッグシートベルトで固定。窓から顔を出させない。夏の車内放置は短時間でも厳禁。",
-    sources: [`${AKC}how-to-train-your-dog-to-love-car-rides/`],
+    sources: ["https://www.akc.org/expert-advice/travel/teach-dog-ride-car-prevent-anxiety/"],
   },
   {
     id: "go-to-bed",
@@ -1339,7 +1339,7 @@ export const commands: DogCommand[] = [
     prerequisites: ["place", "settle", "down"],
     distinguishFrom:
       "プレイス＝定位置（マット）へ行って待つ基本形／ベッドで待機＝そこで“伏せて落ち着き続ける”実用形（来客・食事中向け）。",
-    sources: [`${AKC}how-to-teach-your-dog-to-go-to-bed/`],
+    sources: [`${AKC}teaching-go-to-your-place/`],
   },
   {
     id: "gentle",
@@ -1371,7 +1371,7 @@ export const commands: DogCommand[] = [
     distinguishFrom:
       "やめなさい（leave-it）＝そもそも取らない／そっと＝取ってよいが“やさしく”取る。受け取り方の調整。",
     safety: "子どもが与える前に必ず仕込む。小さな子には“手のひらに平らに乗せて渡す”も併用する。",
-    sources: [`${AKC}teaching-the-take-it-and-drop-it-cues/`],
+    sources: [`${AKC}teaching-your-dog-to-drop-it/`],
   },
 
   // ───────────────────────── トリック・芸 ─────────────────────────
@@ -1404,7 +1404,7 @@ export const commands: DogCommand[] = [
     prerequisites: ["marker", "sit"],
     distinguishFrom:
       "お手＝挨拶/芸として足を“ポンと出す”／足を出す（協調ケア）＝出した足を保持して触らせる。",
-    sources: [`${AKC}teach-your-dog-to-shake/`],
+    sources: [`${AKC}how-to-teach-your-dog-to-shake-hands/`],
   },
   {
     id: "shake-other",
@@ -1434,7 +1434,7 @@ export const commands: DogCommand[] = [
     ],
     prerequisites: ["shake"],
     distinguishFrom: "お手＝決めた側の前足／おかわり＝反対側の前足。左右の区別が目的。",
-    sources: [`${AKC}teach-your-dog-to-shake/`],
+    sources: [`${AKC}how-to-teach-your-dog-to-shake-hands/`],
   },
 
   // ───────── 人気トリック（基本の先へ） ─────────

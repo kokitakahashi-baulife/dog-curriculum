@@ -33,7 +33,7 @@ export const problems: ProblemTopic[] = [
     solution:
       "飛びつきを叱るより、『4本足／座ったら構う』を徹底。興奮を煽って、飛びつかなかった瞬間を強化する。乗ってしまったら無言で背を向ける。",
     commandIds: ["polite-greeting", "off", "sit"],
-    sources: [`${AKC}training/how-to-train-a-dog-to-stop-jumping/`],
+    sources: [`${AKC}training/stop-dog-jumping/`],
   },
   {
     id: "scavenging",
@@ -45,7 +45,7 @@ export const problems: ProblemTopic[] = [
       "触る前に離れる『やめなさい』を先回りで。口に入った後は交換ゲームの『出して』で安全に放させる。",
     commandIds: ["leave-it", "drop-it"],
     caution: "中毒物・鋭利物を飲んだ恐れがあるときは、すぐ動物病院へ。",
-    sources: [`${AKC}training/teach-your-dog-leave-it/`],
+    sources: [`${AKC}training/learning-the-leave-it-command/`],
   },
   {
     id: "pulling",
@@ -56,7 +56,7 @@ export const problems: ProblemTopic[] = [
     solution:
       "リードが張ったら止まる／たるんだら進む、を一貫。アイコンタクトで飼い主に注目させてから歩き出す。",
     commandIds: ["loose-leash", "watch-me", "heel"],
-    sources: [`${AKC}training/how-to-train-your-dog-to-walk-on-a-leash/`],
+    sources: [`${AKC}training/teach-puppy-walk-leash/`],
   },
   {
     id: "barking",
@@ -69,7 +69,7 @@ export const problems: ProblemTopic[] = [
     commandIds: ["settle", "place", "watch-me", "name-response"],
     caution:
       "不安・恐怖が原因の過剰な吠えは、陽性強化の専門家（CCPDT-KA / IAABC）に相談を。",
-    sources: [`${AKC}training/how-to-get-your-dog-to-stop-barking/`],
+    sources: [`${AKC}training/how-to-stop-dog-barking/`],
   },
   {
     id: "mouthing",
@@ -80,7 +80,7 @@ export const problems: ProblemTopic[] = [
     solution:
       "噛んでよいおもちゃに誘導し、噛んだら遊びを一旦中断（噛む＝楽しいことが止まる）。咥えた物は『出して』で交換。",
     commandIds: ["drop-it", "leave-it"],
-    sources: [`${AKC}training/how-to-stop-a-puppy-from-biting/`],
+    sources: [`${AKC}training/how-to-stop-puppy-biting/`],
   },
   {
     id: "alone",
@@ -93,7 +93,7 @@ export const problems: ProblemTopic[] = [
     commandIds: ["crate", "settle", "place"],
     caution:
       "強い分離不安（よだれ・自傷・パニック）は専門家＋獣医に相談を。罰は悪化させる。",
-    sources: [`${AKC}training/separation-anxiety/`],
+    sources: [`${AKC}training/separation-anxiety-in-dogs/`],
   },
   {
     id: "house-soiling",
@@ -117,7 +117,7 @@ export const problems: ProblemTopic[] = [
       "『おいで＝必ず良いこと』を再構築。短い距離・低い誘惑から成功体験を積み、夢中の最中の中断は最後に。",
     commandIds: ["come", "name-response"],
     caution: "確実になるまでは安全な場所・ロングラインで。道路際でのノーリードは避ける。",
-    sources: [`${AKC}training/how-to-teach-your-dog-to-come-when-called/`],
+    sources: [`${AKC}training/reliable-recall-train-dogs-to-come-when-called/`],
   },
   {
     id: "door-dashing",
@@ -129,7 +129,7 @@ export const problems: ProblemTopic[] = [
       "『待って』でドアが開いても止まる、解除語で出る、を徹底。位置を保つ『まて』も合わせて安全を二重化。",
     commandIds: ["wait", "stay", "come"],
     caution: "交通事故の危険が高い。確実になるまで二重扉・リードで管理を。",
-    sources: [`${AKC}training/how-to-teach-your-dog-to-wait/`],
+    sources: [`${AKC}training/teach-your-dog-to-wait-at-doorways/`],
   },
   {
     id: "guarding",
@@ -142,6 +142,6 @@ export const problems: ProblemTopic[] = [
     commandIds: ["drop-it", "leave-it"],
     caution:
       "唸り・歯を当てる等が出ている資源ガードは、自己流は危険。陽性強化の専門家（CCPDT-KA / IAABC）に必ず相談を。",
-    sources: [`${AKC}training/resource-guarding-dogs/`],
+    sources: [`${AKC}training/resource-guarding-in-dogs/`],
   },
 ];

@@ -55,7 +55,7 @@ export const careTasks: CareTask[] = [
     ],
     tips: "迷子札（連絡先）を付けておくと脱走時の保険になる。",
     safety: "指が2本入るゆるさに調整。成長期はサイズをこまめに見直す。",
-    sources: [`${AKC}training/how-to-introduce-a-collar-and-leash/`],
+    sources: [`${AKC}training/teach-puppy-walk-leash/`],
   },
   {
     id: "leash",
@@ -99,7 +99,7 @@ export const careTasks: CareTask[] = [
     ],
     tips: "リードで“引っ張りっこ遊び”を一度でもすると「リード＝おもちゃ」と学習する。遊びは必ず専用のおもちゃで。",
     safety: "リードを引っ張りっこの道具にしない。踏んで驚かせないよう長さを管理。",
-    sources: [`${AKC}training/how-to-introduce-a-collar-and-leash/`],
+    sources: [`${AKC}training/teach-puppy-walk-leash/`],
   },
   {
     id: "harness",
@@ -134,7 +134,7 @@ export const careTasks: CareTask[] = [
       },
     ],
     safety: "脇に擦れがないかサイズを確認。長時間つけっぱなしにしない。",
-    sources: [`${AKC}training/how-to-introduce-a-collar-and-leash/`],
+    sources: [`${AKC}training/teach-puppy-walk-leash/`],
   },
   {
     id: "body-handling",
@@ -168,7 +168,7 @@ export const careTasks: CareTask[] = [
       },
     ],
     safety: "嫌がるサイン（固まる・離れる・舌なめずり・あくび）が出たら一段戻す。強制しない。",
-    sources: [`${AKC}health/cooperative-care-training/`],
+    sources: [`${AKC}health/teaching-dog-enjoy-grooming/`],
   },
   {
     id: "paws",
@@ -197,7 +197,7 @@ export const careTasks: CareTask[] = [
     ],
     tips: "散歩後の“足拭き”を、足を触らせる練習として毎日使える。",
     safety: "犬が引っ込めたら無理に握らない。受け入れた瞬間に報酬。",
-    sources: [`${AKC}health/cooperative-care-training/`],
+    sources: [`${AKC}health/teaching-dog-enjoy-grooming/`],
   },
   {
     id: "mouth",
@@ -225,7 +225,7 @@ export const careTasks: CareTask[] = [
       },
     ],
     tips: "誤飲したものを取り出す・薬を飲ませる時に、この“口を触れる”が効いてくる。",
-    sources: [`${AKC}health/cooperative-care-training/`],
+    sources: [`${AKC}health/teaching-dog-enjoy-grooming/`],
   },
   {
     id: "ears",
@@ -247,7 +247,7 @@ export const careTasks: CareTask[] = [
       },
     ],
     tips: "垂れ耳種（ダックス・コッカー等）は通気が悪く外耳炎になりやすい。日頃から中を見る習慣を。",
-    sources: [`${AKC}health/cooperative-care-training/`],
+    sources: [`${AKC}health/teaching-dog-enjoy-grooming/`],
   },
   {
     id: "brushing",
@@ -399,6 +399,6 @@ export const careTasks: CareTask[] = [
     ],
     tips: "洗いすぎは皮膚の脂を奪う。健康な犬は月1回程度で十分（犬種・体質による）。",
     safety: "湯温は人肌（約36〜38℃）。耳に水が入らないように。滑り止めマットを敷く。",
-    sources: [`${AKC}health/how-to-bathe-a-dog/`],
+    sources: [`${AKC}health/its-bath-time-towels-brushes-dog-shampoo-and-more/`],
   },
 ];
