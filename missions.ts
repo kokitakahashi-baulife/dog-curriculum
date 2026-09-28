@@ -1959,7 +1959,7 @@ export const missions: Mission[] = [
     safety:
       "練習中も完成後も、玄関・車のドアでは必ずリードや安全確保を。飛び出しは交通事故・迷子に直結する危険な行動です。油断せず、確実になるまでノーリードでドアを開けないでください。",
     relatedProblems: ["door-dashing"],
-    relatedArticles: [],
+    relatedArticles: ["door-dashing-fix"],
   },
 
   // ───────────────────────── リソースガード（安全管理・専門家誘導） ─────────────────────────
