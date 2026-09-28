@@ -1188,7 +1188,7 @@ export const missions: Mission[] = [
     safety:
       "大型犬や、子ども・高齢者への飛びつきは転倒・けがのリスクがあります。練習中は人にも「座るまで構わない」協力をお願いし、必要ならリードで安全を確保してください。",
     relatedProblems: ["jumping"],
-    relatedArticles: [],
+    relatedArticles: ["dog-jumping-fix"],
   },
 
   // ───────────────────────── ブラッシング（協調ケア） ─────────────────────────
