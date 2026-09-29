@@ -104,7 +104,6 @@ export const lifeStages: LifeStage[] = [
     commandIds: [
       "release",
       "stay",
-      "wait",
       "door-wait",
       "come",
       "leave-it",

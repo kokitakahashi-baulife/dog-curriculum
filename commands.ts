@@ -444,7 +444,7 @@ export const commands: DogCommand[] = [
     ],
     fadeLure: "ご褒美の間隔をバラバラに。犬が“終わり”を予測して崩れないようにする。",
     proofing:
-      "このコマンドは3Dそのもの。厳密に一度に1つのD。新しいDを足す時は他をゆるめる。",
+      "このコマンドは3Dそのもの。厳密に一度に1つのD。新しいDを足す時は他をゆるめる。家の中でできたら、玄関のドアの前・ごはんを置く前・散歩中の縁石の手前・車のドアを開けたとき、と場面を広げる（どれも同じ「まて」で、終わりは解除語）。",
     troubleshooting: [
       {
         problem: "解除語を教えていない",
@@ -469,44 +469,9 @@ export const commands: DogCommand[] = [
     ],
     prerequisites: ["sit", "release"],
     distinguishFrom:
-      "まて＝戻って解除するまで“その位置”を保つ／待って（Wait）＝次の合図までの一時停止。",
+      "まて＝解除語が出るまで“その位置”にとどまる。ドアの前・ごはんの前・車の乗り降りでも同じ「まて」を使い、終わりは必ず解除語で知らせる。似た音の「待って」など別の合図は作らない（犬が聞き分けにくいため）。",
     safety: "信頼できるまては道路際・玄関での安全行動。焦らず、罰を使わず作る。",
     sources: [CORNELL, `${AKC}dog-training-duration-distance-distraction/`],
-  },
-  {
-    id: "wait",
-    name: "Wait",
-    nameJa: "待って",
-    cue: "Wait / 待って",
-    category: "stay-position",
-    difficulty: "beginner",
-    method: "capture",
-    scene: "ドアの前・車から降りる時・横断歩道。突進を防ぐ衝動制御。",
-    handSignal: "開いた手のひら（まてと同じ）または上げた手。",
-    markPoint: "合図で犬が前進をやめ、止まった／待った瞬間。止まりを強化し、解除で進ませる。",
-    howToTeach: [
-      "ドアに近づき「待って」。ドアノブに手をかける。犬が突進したらドアは止まる／閉まる（ドアが開くこと自体がご褒美）。",
-      "犬が控えた瞬間に「Yes」→解除語でドアを通す（「OK」）。",
-      "食器・車・縁石へと般化する。",
-    ],
-    fadeLure: "“ドアを通れる・食器が来る”という生活報酬がすぐに食べ物の代わりになる。",
-    proofing: "主に誘惑・衝動制御。時間は短くてよい設計。",
-    troubleshooting: [
-      {
-        problem: "まてと待ってを同じものとして教える",
-        solution:
-          "犬が“位置を保つのか・一瞬止まるだけか”混乱する。別の号令として、時に同じセッションで両方を練習し区別を明確にする。",
-      },
-      {
-        problem: "突進した後に通してしまう",
-        solution: "突進を強化することになる。控えてから解除する。",
-      },
-    ],
-    prerequisites: ["marker", "release"],
-    distinguishFrom:
-      "待って＝姿勢は問わず“次の合図まで一瞬止まる”／まて＝戻るまで“その位置”を保つ。",
-    safety: "道路・車のドア・階段での中核的な安全合図。",
-    sources: [CORNELL, `${WDJ}behavior/training-your-dog-to-wait-and-stay/`],
   },
   {
     id: "place",
@@ -1208,7 +1173,7 @@ export const commands: DogCommand[] = [
     method: "capture",
     scene:
       "ドアを開けても飛び出さず、解除語で落ち着いて出る。ハウス（入る）の対になるスキル。車・玄関・クレートからの“飛び出し事故”を防ぐ。",
-    handSignal: "開けた手のひらを犬の前にかざして「待って」、解除で手を引く。",
+    handSignal: "開けた手のひらを犬の前にかざして「まて」、解除で手を引く。",
     markPoint: "ドアが開いても出ず、解除語の後に落ち着いて出た瞬間。",
     howToTeach: [
       "クレートに入った犬の前で、ドアをほんの少し開ける。出ようとしたら無言で閉める。",
@@ -1234,7 +1199,7 @@ export const commands: DogCommand[] = [
     id: "door-wait",
     name: "Door wait",
     nameJa: "玄関でまて",
-    cue: "待って",
+    cue: "まて",
     category: "stay-position",
     difficulty: "intermediate",
     method: "capture",
@@ -1243,7 +1208,7 @@ export const commands: DogCommand[] = [
     handSignal: "開いた手のひらを犬に向けてかざす。",
     markPoint: "ドアノブを動かす／少し開けても、その場にとどまっている状態。",
     howToTeach: [
-      "玄関の前で犬を座らせ「待って」。ドアノブに手をかける。動かなければ「Yes」→ご褒美。",
+      "玄関の前で犬を座らせ「まて」。ドアノブに手をかける。動かなければ「Yes」→ご褒美。",
       "ノブを回す→数cm開ける→大きく開ける、と段階を進める。動いたらドアを閉め、一段やさしい所からやり直す。",
       "全開でも待てたら、解除語で外に出るよう促す（出る合図は解除語のみ）。",
       "実際の外出時に毎回行い、“玄関＝勝手に出ない”を生活習慣にする。",
@@ -1260,9 +1225,9 @@ export const commands: DogCommand[] = [
         solution: "開ける速度が速すぎる。1cm単位でやり直し、待てる幅まで戻す。",
       },
     ],
-    prerequisites: ["wait", "release"],
+    prerequisites: ["stay", "release"],
     distinguishFrom:
-      "まて（stay）＝姿勢と位置を保ち続ける／玄関でまて＝“出口で一時停止し解除で進む”動作直前の自制。",
+      "合図は同じ「まて」。ふつうのまて＝飼い主が戻って解除するまで位置を保つ／玄関でまて＝ドアが開いても出口でとどまり、解除語で外へ出る。",
     safety: "ドアダッシュは死亡事故の主因の一つ。子犬のうちから最優先で習慣化する。",
     sources: [`${AKC}teach-your-dog-to-wait-at-doorways/`],
   },
@@ -1282,7 +1247,7 @@ export const commands: DogCommand[] = [
       "エンジンを切った車で、ドアを開けおやつを車内に置く→自分から乗ったら「Yes」→ご褒美。",
       "乗る動きが出たら「乗って」と言ってから誘導する。乗ったら車内で落ち着けるよう数粒あげる。",
       "短い時間エンジンをかける→近所を1分だけ走る、と“乗る＝良いことが起きる”を少しずつ。",
-      "降りるときは飛び降りさせず「待って」→解除語で「降りて」。出口での自制を徹底する。",
+      "降りるときは飛び降りさせず「まて」→解除語で「降りて」。出口での自制を徹底する。",
     ],
     fadeLure: "到着先での散歩・遊びが報酬になる。短時間の“楽しいだけのドライブ”を挟むと車嫌いを防げる。",
     proofing: "停車中→近所一周→長距離、と時間をのばす。車内ではクレート/シートベルト固定で安全確保。",
@@ -1300,7 +1265,7 @@ export const commands: DogCommand[] = [
         solution: "車酔い・不安のサイン。空腹気味で短時間から。続く場合は獣医に酔い止めを相談。",
       },
     ],
-    prerequisites: ["release", "wait"],
+    prerequisites: ["release", "stay"],
     safety:
       "走行中は必ずクレートかドッグシートベルトで固定。窓から顔を出させない。夏の車内放置は短時間でも厳禁。",
     sources: ["https://www.akc.org/expert-advice/travel/teach-dog-ride-car-prevent-anxiety/"],

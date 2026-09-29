@@ -994,80 +994,6 @@ export const commandLevels: Record<string, CommandLevel[]> = {
     },
   ],
 
-  // 待って（任意）＝姿勢は問わず“次の合図まで一瞬止まる”。stayの簡易版。
-  wait: [
-    {
-      level: 1,
-      condition: "ドアの前で一瞬待たせる。",
-      steps: [
-        "犬を連れてドアの前に立ち、「待って」と言う。",
-        "ドアノブに手をかける。犬が前に出ようとしたら、手を止める（ドアは開けない）。",
-        "犬が控えたら「Yes」→「ブレイク」でドアを通す。",
-      ],
-      criterion: "前進をやめて控える、10回中8回。",
-      reason: "ドアからの突進を止める（脱走・飛び出し予防）。",
-      testType: "trial",
-      measure: { trials: 10, successes: 8 },
-      requires: ["marker:L1", "release:L1"],
-    },
-    {
-      level: 2,
-      condition: "ドアを少し開けても待たせる。",
-      steps: [
-        "「待って」と言って、ドアを少しだけ開ける。",
-        "犬が出ようとしたら、すぐ閉める。",
-        "飛び出さず待てたら「Yes」→「ブレイク」で通す。",
-      ],
-      criterion: "飛び出さない、10回中8回。",
-      reason: "開いても出ない一時停止。",
-      testType: "trial",
-      measure: { trials: 10, successes: 8 },
-      requires: ["wait:L1"],
-    },
-    {
-      level: 3,
-      condition: "食器を置く間、待たせる。",
-      steps: [
-        "ごはんを持って「待って」と言う。",
-        "食器を床に置く。犬が突進したら、食器を持ち上げてやり直す。",
-        "待てたら「ブレイク」と言って食べさせる。",
-      ],
-      criterion: "食器へ突進せず待つ、10回中8回。",
-      reason: "食事の興奮をコントロール。",
-      testType: "trial",
-      measure: { trials: 10, successes: 8 },
-      requires: ["wait:L1"],
-    },
-    {
-      level: 4,
-      condition: "散歩中、段差・縁石の前で待たせる。",
-      steps: [
-        "散歩中、段差や縁石の手前で立ち止まり「待って」。",
-        "犬も立ち止まったら「Yes」。",
-        "安全を確認して「ブレイク」で進む。",
-      ],
-      criterion: "立ち止まる、10回中8回。",
-      reason: "横断・段差の前で止まる安全習慣。",
-      testType: "trial",
-      measure: { trials: 10, successes: 8 },
-      requires: ["wait:L2", "loose-leash:L1"],
-    },
-    {
-      level: 5,
-      condition: "車のドアを開けても待たせる。",
-      steps: [
-        "車の中の犬に「待って」と言う。",
-        "ドアを開ける。降りようとしたら閉めてやり直す。",
-        "飛び降りず待てたら「ブレイク」で降ろす。",
-      ],
-      criterion: "飛び降りずに待つ、10回中8回。",
-      reason: "乗り降りのときの飛び出し防止（交通安全）。",
-      testType: "trial",
-      measure: { trials: 10, successes: 8 },
-      requires: ["wait:L2"],
-    },
-  ],
-
   place: [
     {
       level: 1,
@@ -2110,14 +2036,14 @@ export const commandLevels: Record<string, CommandLevel[]> = {
       level: 1,
       condition: "ドアノブに触れても動かない。",
       steps: [
-        "玄関の前で犬を座らせ「待って」。ドアノブに手をかける。",
+        "玄関の前で犬を座らせ「まて」。ドアノブに手をかける。",
         "動かなければ「Yes」→ご褒美。動いたらノブから手を離してやり直す。",
       ],
       criterion: "ノブに触れても動かずにいる、5回続けて。",
       reason: "玄関で勝手に動かない出発点。",
       testType: "trial",
       measure: { successes: 5, consecutive: true },
-      requires: ["wait:L1", "release:L1"],
+      requires: ["stay:L1", "release:L1"],
     },
     {
       level: 2,
@@ -2176,16 +2102,16 @@ export const commandLevels: Record<string, CommandLevel[]> = {
     },
     {
       level: 3,
-      condition: "降りるとき待って、解除語で降りる。",
+      condition: "降りるとき「まて」で待ち、解除語で降りる。",
       steps: [
-        "停車してドアを開けたら「待って」。飛び降りさせない。",
+        "停車してドアを開けたら「まて」。飛び降りさせない。",
         "待てたら解除語で「降りて」と促す。降りたらご褒美。",
       ],
       criterion: "ドアを開けても待ち、解除語で降りる、10回中8回。",
       reason: "車道側への飛び降り事故を防ぐ。",
       testType: "trial",
       measure: { trials: 10, successes: 8 },
-      requires: ["car:L2", "wait:L1"],
+      requires: ["car:L2", "stay:L1"],
     },
     {
       level: 4,

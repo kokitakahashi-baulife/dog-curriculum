@@ -716,7 +716,6 @@ export const glossary: GlossaryTerm[] = [
     ],
     "relatedCommands": [
       "stay",
-      "wait",
       "leave-it"
     ],
     "sources": [

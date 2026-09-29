@@ -1832,7 +1832,7 @@ export const missions: Mission[] = [
     chain: [
       { id: "marker", kind: "command", label: "「Yes」の合図", role: "正解の瞬間を伝える共通言語。" },
       { id: "sit", kind: "command", label: "おすわり", role: "ドアの前で落ち着く姿勢。" },
-      { id: "wait", kind: "command", label: "まて", role: "その場でとどまる土台。" },
+      { id: "stay", kind: "command", label: "まて", role: "その場でとどまる土台。" },
       { id: "door-wait", kind: "command", label: "ドアで待つ", role: "ドアが開いても飛び出さない。" },
       { id: "release", kind: "command", label: "よし（許可）", role: "許可が出てから動く区別。" },
     ],
@@ -1845,9 +1845,9 @@ export const missions: Mission[] = [
         day: 1,
         focus: "「まて」でその場にとどまる",
         minutes: 8,
-        refId: "wait",
+        refId: "stay",
         refKind: "command",
-        levelKey: "wait:L1",
+        levelKey: "stay:L1",
         step: [
           "「まて」で短時間その場にとどまれたら「Yes」→おやつ。",
           "とどまれる時間を少しずつ伸ばす。",

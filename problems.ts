@@ -126,8 +126,8 @@ export const problems: ProblemTopic[] = [
     symptom: "玄関や車のドアが開くと外へ飛び出す。",
     why: "ドアが開く＝外に行ける、が強化されている。安全に関わる危険な癖。",
     solution:
-      "『待って』でドアが開いても止まる、解除語で出る、を徹底。位置を保つ『まて』も合わせて安全を二重化。",
-    commandIds: ["wait", "stay", "come"],
+      "『まて』でドアが開いても止まる、解除語で出る、を徹底。玄関・車のドアなど出口ごとに同じ『まて』で練習する。",
+    commandIds: ["stay", "door-wait", "come"],
     caution: "交通事故の危険が高い。確実になるまで二重扉・リードで管理を。",
     sources: [`${AKC}training/teach-your-dog-to-wait-at-doorways/`],
   },
