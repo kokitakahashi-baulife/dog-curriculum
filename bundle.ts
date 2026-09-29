@@ -13,6 +13,7 @@ import { lifeStages } from "./lifeStages";
 import { programPhases, milestones } from "./program";
 import { roadmap } from "./roadmap";
 import { fundamentals } from "./fundamentals";
+import { glossary, glossaryGroupLabels } from "./glossary";
 import { buildLevelSequence } from "./sequence";
 import { curriculumVersion } from "./meta";
 
@@ -40,6 +41,8 @@ export function curriculumBundle() {
     roadmap,
     // 基礎メカニクス
     fundamentals,
+    // しつけ辞典（用語）
+    glossary: { terms: glossary, groupLabels: glossaryGroupLabels },
   };
 }
 

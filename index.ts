@@ -47,6 +47,10 @@ export type { SeqNode } from "./sequence";
 export { fundamentals } from "./fundamentals";
 export type { Fundamental } from "./fundamentals";
 
+// しつけ辞典（用語）
+export { glossary, glossaryGroupLabels } from "./glossary";
+export type { GlossaryTerm, GlossaryGroup } from "./glossary";
+
 // 問題行動から効くコマンドを引くFAQ軸
 export { problems } from "./problems";
 export type { ProblemTopic } from "./problems";

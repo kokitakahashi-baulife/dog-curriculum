@@ -3,4 +3,4 @@
 //   - メジャー: 構造（型）が変わる破壊的変更
 //   - マイナー: コマンド/プログラム等の追加・改訂
 //   - パッチ : 文言の微修正
-export const curriculumVersion = "1.2.8";
+export const curriculumVersion = "1.3.0";
