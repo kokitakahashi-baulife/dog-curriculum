@@ -782,7 +782,7 @@ export const commandLevels: Record<string, CommandLevel[]> = {
       condition: "おやつで誘導して立たせる（まだ言葉は言わない）。",
       steps: [
         "犬を座らせる。鼻先におやつを近づける。",
-        "おやつを鼻先からまっすぐ前へ動かす。前へ出ようとして4本足で立つ。",
+        "おやつを鼻先につけ、床と平行に人のほうへ（犬の鼻先から離れる方向へ）まっすぐ引く。追って4本足で立つ。",
         "立った瞬間に「Yes」→その姿勢のままおやつ。まだ「たて」とは言わない。",
       ],
       criterion: "おやつにつられて4本足で立ち、歩き出さない。5回続けてできれば合格。",
@@ -795,7 +795,7 @@ export const commandLevels: Record<string, CommandLevel[]> = {
       level: 2,
       condition: "おやつを持たない手の合図だけで立たせる。",
       steps: [
-        "おやつは持たず、Lv1と同じ「前へ動かす」手の動きだけをする。",
+        "おやつは持たず、Lv1と同じ「人のほうへ引く」手の動きだけをする。",
         "立ったら「Yes」→反対の手に持ったおやつ。",
         "言葉はまだ言わない。",
       ],
@@ -2384,8 +2384,8 @@ export const commandLevels: Record<string, CommandLevel[]> = {
     },
     {
       level: 2,
-      condition: "「タッチ」の合図で当てる（高さも上げる）。",
-      criterion: "「タッチ」で手のひらに当てる、10回中8回。",
+      condition: "「ハイタッチ」の合図で当てる（高さも上げる）。",
+      criterion: "「ハイタッチ」で手のひらに当てる、10回中8回。",
       reason: "合図でハイタッチが決まる。",
       testType: "trial",
       measure: { trials: 10, successes: 8 },
