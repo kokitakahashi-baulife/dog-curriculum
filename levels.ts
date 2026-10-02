@@ -260,7 +260,7 @@ export const commandLevels: Record<string, CommandLevel[]> = {
       level: 1,
       condition: "手のひらに鼻でタッチさせる。",
       steps: [
-        "手のひらを開いて、犬の鼻先10cmくらいに出す。",
+        "手のひらを開いて、犬の鼻から2〜5cmくらいに出す。",
         "犬が興味を持って鼻でツンと触れた瞬間に「Yes」→おやつ。",
         "触れないときは、手に少しおやつのにおいをつけて誘ってよい。",
       ],
@@ -871,8 +871,8 @@ export const commandLevels: Record<string, CommandLevel[]> = {
       condition: "「まて」で短く待たせ、「ブレイク」で解放する。",
       steps: [
         "犬を座らせる（または伏せ）。「まて」と言う。",
-        "1秒たったら、終わりの合図「ブレイク」と言って犬を動かす。",
-        "ブレイクの言葉まで動かなければ「Yes」→おやつ。",
+        "1秒、姿勢のまま待てたら「Yes」→その姿勢のままおやつ。",
+        "そのあと終わりの合図「ブレイク」と言って犬を動かす。",
       ],
       criterion: "終わりの合図まで動かない、5回続けて。",
       reason: "「終わりの合図まで待つ」を覚える、まての土台。",
@@ -886,7 +886,7 @@ export const commandLevels: Record<string, CommandLevel[]> = {
       steps: [
         "「まて」と言う。",
         "心の中で10秒数える。",
-        "10秒間、姿勢を崩さず待てたら「ブレイク」→「Yes」→おやつ。崩れたら秒数を短くしてやり直す。",
+        "10秒間、姿勢を崩さず待てたら「Yes」→おやつ→「ブレイク」で動かす。崩れたら秒数を短くしてやり直す。",
       ],
       criterion: "終わりの合図まで10秒、姿勢を保つ、5回続けて。",
       reason: "待てる時間を増やす。",
@@ -900,7 +900,7 @@ export const commandLevels: Record<string, CommandLevel[]> = {
       steps: [
         "「まて」と言う。",
         "30秒数える。",
-        "30秒待てたら「ブレイク」→「Yes」→おやつ。",
+        "30秒待てたら「Yes」→おやつ→「ブレイク」で動かす。",
       ],
       criterion: "終わりの合図まで30秒、姿勢を保つ、5回続けて。",
       reason: "食事中・玄関対応に使える長さ。",
@@ -914,7 +914,7 @@ export const commandLevels: Record<string, CommandLevel[]> = {
       steps: [
         "「まて」と言う。",
         "その場で1歩下がって、すぐ戻る。",
-        "動かず待てていたら「ブレイク」→「Yes」→おやつ。",
+        "動かず待てていたら「Yes」→おやつ→「ブレイク」で動かす。",
       ],
       criterion: "1歩下がって戻る間、待てる、10回中8回。",
       reason: "あなたが離れても待てる（距離の始まり）。",
@@ -928,7 +928,7 @@ export const commandLevels: Record<string, CommandLevel[]> = {
       steps: [
         "「まて」と言う。",
         "3m離れて、3秒待ってから戻る。",
-        "動かず待てていたら「ブレイク」→「Yes」→おやつ。",
+        "動かず待てていたら「Yes」→おやつ→「ブレイク」で動かす。",
       ],
       criterion: "3m離れて戻る間、待てる、10回中8回。",
       reason: "もっと離れても待てる。",
@@ -942,7 +942,7 @@ export const commandLevels: Record<string, CommandLevel[]> = {
       steps: [
         "「まて」と言う。",
         "部屋を出て、5秒たってから戻る。",
-        "戻ったときも待てていたら「ブレイク」→「Yes」→おやつ。",
+        "戻ったときも待てていたら「Yes」→おやつ→「ブレイク」で動かす。",
       ],
       criterion: "部屋を出て戻った時も待てている、10回中8回。",
       reason: "見えなくても待てる（留守番・来客の土台）。",
@@ -956,7 +956,7 @@ export const commandLevels: Record<string, CommandLevel[]> = {
       steps: [
         "「まて」と言う。",
         "1m先の床におやつを置く。",
-        "取りに行かず15秒待てたら「ブレイク」→「Yes」→手持ちの別のおやつ（床の物は取らせない）。",
+        "取りに行かず15秒待てたら「Yes」→手持ちの別のおやつ（床の物は取らせない）→「ブレイク」で動かす。",
       ],
       criterion: "取らずに15秒待てる、10回中8回。",
       reason: "誘惑があっても待てる。",
@@ -984,7 +984,7 @@ export const commandLevels: Record<string, CommandLevel[]> = {
       steps: [
         "公園で「まて」と言う。",
         "30秒待たせる。",
-        "待てたら「ブレイク」→「Yes」→おやつ。できなければ刺激から少し離れてやり直す。",
+        "待てたら「Yes」→おやつ→「ブレイク」で動かす。できなければ刺激から少し離れてやり直す。",
       ],
       criterion: "30秒待てる、10回中7回。",
       reason: "どこでも待てる、いちばんの仕上げ。",
@@ -1029,7 +1029,7 @@ export const commandLevels: Record<string, CommandLevel[]> = {
       steps: [
         "「プレイス」でマットに乗せ、「ふせ」で伏せさせる。",
         "「まて」で10秒待たせる。",
-        "崩さず待てたら「ブレイク」→「Yes」→おやつ。",
+        "崩さず待てたら「Yes」→マットの上でおやつ→「ブレイク」で動かす。",
       ],
       criterion: "マット上で伏せたまま10秒、10回中8回。",
       reason: "自分の場所で落ち着いて留まる。",
@@ -1057,7 +1057,7 @@ export const commandLevels: Record<string, CommandLevel[]> = {
       steps: [
         "「プレイス」でマットに乗せ、伏せさせる。",
         "あなたは家事や食事など、普通の活動をする。",
-        "1分間マットから出なければ「ブレイク」→「Yes」→おやつ。出たら時間を短くしてやり直す。",
+        "1分間マットから出なければ「Yes」→マットの上でおやつ→「ブレイク」で動かす。出たら時間を短くしてやり直す。",
       ],
       criterion: "立ち上がらず1分間マット上で待つ、5回続けて。",
       reason: "食事中・作業中も、足元に来ず落ち着いて待てる。",
@@ -1641,7 +1641,7 @@ export const commandLevels: Record<string, CommandLevel[]> = {
       level: 1,
       condition: "左側につけて少し歩く。",
       steps: [
-        "おやつを左手に持ち、犬を自分の左側、ひざのあたりにつける。",
+        "おやつを左手に持ち、犬を自分の左側につける。犬の肩が左脚の横（ズボンの縫い目の線）に並ぶ位置。",
         "おやつで誘導しながら、横位置を保って2歩進む。",
         "横についたまま歩けたら「Yes」→おやつ。",
       ],
@@ -2008,7 +2008,7 @@ export const commandLevels: Record<string, CommandLevel[]> = {
       condition: "全開でも待ち、解除語で出る。",
       steps: [
         "開ける幅を少しずつ広げ、全開でも待てるようにする。",
-        "待てたら解除語（OK/ブレイク）で出るよう促し、出たらご褒美。",
+        "待てたら解除語「ブレイク」で出るよう促し、出たらご褒美。",
       ],
       criterion: "全開で待ち、解除語で出る、10回中8回。",
       reason: "出る合図を解除語に統一し、勝手な飛び出しをなくす。",
@@ -2021,7 +2021,7 @@ export const commandLevels: Record<string, CommandLevel[]> = {
       condition: "車のドア・キャリーでも待って解除で出る。",
       steps: [
         "車のドアやキャリーの扉でも同じように、開けて待たせる。",
-        "待てたら解除語で出す。場所を変えて試す。",
+        "待てたら解除語「ブレイク」で出す。場所を変えて試す。",
       ],
       criterion: "別の出口でも待って解除で出る、各10回中8回。",
       reason: "車・キャリーからの飛び出し事故を防ぐ。",
@@ -2036,11 +2036,11 @@ export const commandLevels: Record<string, CommandLevel[]> = {
       level: 1,
       condition: "ドアノブに触れても動かない。",
       steps: [
-        "玄関の前で犬を座らせ「まて」。ドアノブに手をかける。",
+        "すり抜けても外に出ない家の中のドアで始める。ドアの前で犬を座らせ「まて」。ドアノブに手をかける。",
         "動かなければ「Yes」→ご褒美。動いたらノブから手を離してやり直す。",
       ],
       criterion: "ノブに触れても動かずにいる、5回続けて。",
-      reason: "玄関で勝手に動かない出発点。",
+      reason: "ドアの前で勝手に動かない出発点。",
       testType: "trial",
       measure: { successes: 5, consecutive: true },
       requires: ["stay:L1", "release:L1"],
@@ -2050,7 +2050,8 @@ export const commandLevels: Record<string, CommandLevel[]> = {
       condition: "ドアを開けても待ち、解除語で出る。",
       steps: [
         "ノブを回す→数cm開ける→大きく開ける、と段階を進める。",
-        "動いたらドアを閉め一段戻る。全開でも待てたら解除語で外へ出す。",
+        "動いたらドアを閉め一段戻る。全開でも待てたら解除語「ブレイク」で出す。",
+        "家の中のドアでできたら、リードをつけて玄関で同じ順にやる（ノブに触れる段階から）。",
       ],
       criterion: "ドアを全開にしても待ち、解除語で出る、10回中8回。",
       reason: "玄関からの飛び出しを防ぎ、出る合図を解除語に統一する。",
@@ -2063,7 +2064,7 @@ export const commandLevels: Record<string, CommandLevel[]> = {
       condition: "別の出口（共用扉・門など）でも待つ。",
       steps: [
         "マンション共用扉・門・公園のゲートなど、別の出口でも同じ手順で待たせる。",
-        "待てたら解除語で進ませる。",
+        "待てたら解除語「ブレイク」で進ませる。",
       ],
       criterion: "別の出口でも待って解除で進む、各10回中8回。",
       reason: "どの出口でも飛び出さない生活習慣にする。",
@@ -2105,7 +2106,7 @@ export const commandLevels: Record<string, CommandLevel[]> = {
       condition: "降りるとき「まて」で待ち、解除語で降りる。",
       steps: [
         "停車してドアを開けたら「まて」。飛び降りさせない。",
-        "待てたら解除語で「降りて」と促す。降りたらご褒美。",
+        "待てたら解除語「ブレイク」で「降りて」と促す。降りたらご褒美。",
       ],
       criterion: "ドアを開けても待ち、解除語で降りる、10回中8回。",
       reason: "車道側への飛び降り事故を防ぐ。",
@@ -2160,7 +2161,7 @@ export const commandLevels: Record<string, CommandLevel[]> = {
       condition: "ベッドで1分伏せて待つ。",
       steps: [
         "「ベッド」で伏せさせたら、すぐ解除せず時間をのばす。",
-        "10秒→30秒→1分と伏せて待てたら「Yes」→ご褒美、最後に解除語で終了。",
+        "10秒→30秒→1分と伏せて待てたら「Yes」→ご褒美、最後に解除語「ブレイク」で終了。",
       ],
       criterion: "ベッドで1分伏せて待つ、3回成功。",
       reason: "来客対応や食事の間、その場で待たせられる長さにする。",
@@ -2229,12 +2230,12 @@ export const commandLevels: Record<string, CommandLevel[]> = {
   shake: [
     {
       level: 1,
-      condition: "前足を持ち上げて手に乗せさせる。",
+      condition: "前足を持ち上げて拳にふれさせる。",
       steps: [
         "犬を座らせ、おやつを握った拳を前足の少し上に出す。",
-        "前足で取ろうとして足が上がり、手に乗った瞬間に「Yes」→手を開いてご褒美。",
+        "前足で取ろうとして、前足が上がって拳にふれた瞬間に「Yes」→手を開いてご褒美。",
       ],
-      criterion: "前足が手のひらに乗る、5回続けて。",
+      criterion: "前足が上がって拳にふれる、5回続けて。",
       reason: "教えやすい最初のトリック。成功体験を作る。",
       testType: "trial",
       measure: { successes: 5, consecutive: true },
@@ -2397,14 +2398,14 @@ export const commandLevels: Record<string, CommandLevel[]> = {
       level: 1,
       condition: "宙で前足を上下に振る（手に触れずに）。",
       steps: [
-        "お手の手を、足が届かない少し手前に出す。",
+        "お手・ハイタッチの手を、足が届かない少し手前に出す。",
         "足が宙で上下した瞬間に「Yes」→ご褒美。",
       ],
       criterion: "宙で前足を振る、5回続けて。",
       reason: "“触れずに振る”動きを作る。",
       testType: "trial",
       measure: { successes: 5, consecutive: true },
-      requires: ["marker:L1", "shake:L2"],
+      requires: ["marker:L1", "shake:L2", "high-five:L2"],
     },
     {
       level: 2,
